@@ -1,6 +1,6 @@
-var userLimit = 15_000_00
+var userLimit = 80_000_00
 fun main() {
-    val commission = moneyTransferCommission(25_000_00, "Vk pay", userLimit)
+    val commission = moneyTransferCommission(25_000_00, "Mastercard", userLimit)
     when (commission) {
         -10 -> println("Превышен месячный лимит")
         -20 -> println("Превышен дневной лимит")
