@@ -1,13 +1,4 @@
 var userLimit = 80_000_00
-fun main() {
-    val commission = moneyTransferCommission(25_000_00, "Mastercard", userLimit)
-    when (commission) {
-        -10 -> println("Превышен месячный лимит")
-        -20 -> println("Превышен дневной лимит")
-        else -> println("Комиссия за перевод составит ${commission / 100} рублей")
-    }
-}
-
 fun moneyTransferCommission(transferAmount: Int, account: String = "Vk pay", limit: Int = 0): Int {
     when {
         limit > 600_000_00 -> return -10
