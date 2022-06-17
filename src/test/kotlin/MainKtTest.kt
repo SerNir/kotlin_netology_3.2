@@ -51,7 +51,7 @@ class MainKtTest {
         val limit = 600_001_00
 
         val result = moneyTransferCommission(transferAmount, account, limit)
-        assertEquals(10, result)
+        assertEquals(-10, result)
     }
 
     @Test
